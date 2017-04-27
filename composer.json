@@ -1,0 +1,24 @@
+{
+    "name": "dosarkz/epay-alfabank",
+    "description": "Payment service from AlfaBank",
+    "authors": [
+        {
+            "name": "Yezhan Ashenov",
+            "email": "ashenov.e@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "classmap": [
+            "src/Config",
+            "src/Facades",
+            "src/Certificates",
+            "src/Requests",
+            "src/Providers"
+        ],
+        "psr-4": {
+            "Dosarkz\\EpayAlfaBank\\Tests\\": "tests/",
+            "Dosarkz\\EpayAlfaBank\\": "src/"
+        }
+    }
+}
