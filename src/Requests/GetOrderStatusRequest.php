@@ -4,7 +4,7 @@ namespace Dosarkz\EPayAlfaBank\Requests;
 
 use App\Http\Requests\Request;
 
-class DoRegisterRequest extends Request
+class GetOrderStatusRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,9 +26,7 @@ class DoRegisterRequest extends Request
         return [
             'userName'              =>  'required',
             'password'              =>  'required',
-            'orderNumber'           =>  'required',
-            'amount'                =>  'required',
-            'returnUrl'             =>  'required'
+            'orderId'           =>  'required',
         ];
 
     }

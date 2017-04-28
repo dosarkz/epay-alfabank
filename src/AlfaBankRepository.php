@@ -29,10 +29,9 @@ class AlfaBankRepository
     {
     }
 
-    public function basicPay($params)
+    public function basicPay()
     {
-        $basicPay =  new BasicPay();
-        return $basicPay->registerDo(new DoRegisterRequest($params));
+        return new BasicPay();
     }
 
 
