@@ -12,7 +12,6 @@
         "classmap": [
             "src/Config",
             "src/Facades",
-            "src/Certificates",
             "src/Requests",
             "src/Providers"
         ],
