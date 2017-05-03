@@ -14,11 +14,11 @@ class AlfaBankServiceProvider extends ServiceProvider
     public function boot()
     {
          $this->publishes([
-             __DIR__ . '/../Config/alfabank.php' => config_path('alfabank.php'),
+             __DIR__ . '/Config/alfabank.php' => config_path('alfabank.php'),
          ]);
 
          $this->mergeConfigFrom(
-             __DIR__ . '/../Config/alfabank.php', 'alfabank'
+             __DIR__ . '/Config/alfabank.php', 'alfabank'
          );
     }
 
