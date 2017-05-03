@@ -2,7 +2,7 @@
 
 namespace Dosarkz\EPayAlfaBank\Requests;
 
-use App\Http\Requests\Request;
+use Illuminate\Http\Request;
 
 class GetOrderStatusRequest extends Request
 {
