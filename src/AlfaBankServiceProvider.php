@@ -1,7 +1,7 @@
 <?php
-namespace Dosarkz\EPayAlfaBank\Providers;
+namespace Dosarkz\EPayAlfaBank;
 
-use Dosarkz\EPayAlfaBank\AlfaBankRepository;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
 
 class AlfaBankServiceProvider extends ServiceProvider
