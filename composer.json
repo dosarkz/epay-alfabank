@@ -16,7 +16,7 @@
             "src/Requests"
         ],
         "psr-4": {
-            "Dosarkz\\EpayAlfaBank\\": "src/"
+            "Dosarkz\\EpayAlfaBank\\": "src"
         }
     }
 }
