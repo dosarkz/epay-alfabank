@@ -13,10 +13,11 @@
         "classmap": [
             "src/Config",
             "src/Facades",
-            "src/Requests"
+            "src/Requests",
+            "src/"
         ],
         "psr-4": {
-            "Dosarkz\\EpayAlfaBank\\": "src"
+            "Dosarkz\\EPayAlfaBank\\": "src/"
         }
     }
 }
