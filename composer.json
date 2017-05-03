@@ -1,6 +1,7 @@
 {
     "name": "dosarkz/epay-alfabank",
     "description": "Payment service from AlfaBank",
+    "type": "library",
     "authors": [
         {
             "name": "Yezhan Ashenov",
