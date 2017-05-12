@@ -3,6 +3,7 @@ namespace Dosarkz\EPayAlfaBank;
 
 use Dosarkz\EPayAlfaBank\Requests\DoRegisterRequest;
 use Dosarkz\EPayAlfaBank\Requests\GetOrderStatusRequest;
+use Dosarkz\EPayAlfaBank\Requests\RefundRequest;
 
 /**
  * Class AlfaBankRepository
@@ -86,6 +87,15 @@ class AlfaBankRepository
     public function registerPreAuth(DoRegisterRequest $request)
     {
         return $this->request('registerPreAuth.do', $request->all());
+    }
+
+    /**
+     * @param RefundRequest $request
+     * @return mixed
+     */
+    public function refund(RefundRequest $request)
+    {
+        return $this->request('refund.do', $request->all());
     }
 
     /**
