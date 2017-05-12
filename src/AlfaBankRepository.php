@@ -99,6 +99,15 @@ class AlfaBankRepository
     }
 
     /**
+     * @param GetOrderStatusRequest $request
+     * @return mixed
+     */
+    public function reverse(GetOrderStatusRequest $request)
+    {
+        return $this->request('reverse.do', $request->all());
+    }
+
+    /**
      * @param $method
      * @param $data
      * @return mixed
