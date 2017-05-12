@@ -2,14 +2,37 @@
 namespace Dosarkz\EPayAlfaBank;
 
 use Dosarkz\EPayAlfaBank\Requests\DoRegisterRequest;
+use Dosarkz\EPayAlfaBank\Requests\GetOrderStatusRequest;
 
+/**
+ * Class AlfaBankRepository
+ * @package Dosarkz\EPayAlfaBank
+ */
 class AlfaBankRepository
 {
+    /**
+     * @var
+     */
     public $username;
+    /**
+     * @var
+     */
     public $password;
+    /**
+     * @var
+     */
     public $getaway_url;
+    /**
+     * @var
+     */
     public $return_url;
+    /**
+     * @var
+     */
     public $orderNumber;
+    /**
+     * @var
+     */
     public $amount;
 
 
@@ -29,12 +52,41 @@ class AlfaBankRepository
     {
     }
 
-    public function basicPay()
+    /**
+     * @param DoRegisterRequest $request
+     * @return mixed
+     */
+    public function registerDo(DoRegisterRequest $request)
     {
-        return new BasicPay();
+        return $this->request('register.do', $request->all());
     }
 
+    /**
+     * @param GetOrderStatusRequest $request
+     * @return mixed
+     */
+    public function getOrderStatus(GetOrderStatusRequest $request)
+    {
+        return $this->request('getOrderStatus.do', $request->all());
+    }
 
+    /**
+     * @param GetOrderStatusRequest $request
+     * @return mixed
+     */
+    public function getOrderStatusExtended(GetOrderStatusRequest $request)
+    {
+        return $this->request('getOrderStatusExtended.do', $request->all());
+    }
+
+    /**
+     * @param DoRegisterRequest $request
+     * @return mixed
+     */
+    public function registerPreAuth(DoRegisterRequest $request)
+    {
+        return $this->request('registerPreAuth.do', $request->all());
+    }
 
     /**
      * @param $method
