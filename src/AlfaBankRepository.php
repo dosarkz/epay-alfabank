@@ -3,6 +3,7 @@ namespace Dosarkz\EPayAlfaBank;
 
 use Dosarkz\EPayAlfaBank\Requests\DoRegisterRequest;
 use Dosarkz\EPayAlfaBank\Requests\GetOrderStatusRequest;
+use Dosarkz\EPayAlfaBank\Requests\PaymentOrderBindingDoRequest;
 use Dosarkz\EPayAlfaBank\Requests\RefundRequest;
 
 /**
@@ -105,6 +106,11 @@ class AlfaBankRepository
     public function reverse(GetOrderStatusRequest $request)
     {
         return $this->request('reverse.do', $request->all());
+    }
+
+    public function paymentOrderBindingDo(PaymentOrderBindingDoRequest $request)
+    {
+        return $this->request('paymentOrderBinding.do', $request->all());
     }
 
     /**
