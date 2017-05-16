@@ -1,4 +1,4 @@
-# epay-alfabank
+# epay-alfabank for Laravel Framework
 Equiring system from Alfa Bank
 
 # Install
@@ -18,3 +18,23 @@ Equiring system from Alfa Bank
 ```
  'AlfaBank' => Dosarkz\EPayAlfaBank\Facades\AlfaBank::class,
 ```
+# Basic Pay
+
+```
+use Dosarkz\EPayAlfaBank\Facades\AlfaBank;
+use Dosarkz\EPayAlfaBank\Requests\DoRegisterRequest;
+
+ $params = [
+    'userName' => '*',
+                    'password' =>  '*',
+                    'orderNumber' => '*',
+                    'amount'    => '*',
+                    'currency' => 398,
+                    'returnUrl' => '*',
+                    'description'   => '*',
+                    'language'  => '*',
+                    'pageView'  => '*',
+ ]
+ 
+ $pay = AlfaBank::registerDo(new DoRegisterRequest($params));
+ ```
