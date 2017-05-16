@@ -113,6 +113,11 @@ class AlfaBankRepository
         return $this->request('paymentOrderBinding.do', $request->all());
     }
 
+    public function depositDo(RefundRequest $request)
+    {
+        return $this->request('deposit.do', $request->all());
+    }
+
     /**
      * @param $method
      * @param $data
