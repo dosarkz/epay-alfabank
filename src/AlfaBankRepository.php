@@ -47,11 +47,11 @@ class AlfaBankRepository
     private function setTestParams()
     {
         $this->getaway_url  =   config('alfabank.TEST_GETAWAY_URL');
-        $this->username = config('alfabank.');
     }
 
     private function setProductionParams()
     {
+        $this->getaway_url  =   config('alfabank.GETAWAY_URL');
     }
 
     /**
