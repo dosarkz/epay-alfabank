@@ -29,10 +29,9 @@ class AlfaBankServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app['alfabank'] = $this->app->share(function($app)
+        $this->app->singleton("alfabank", function($app)
         {
             return new AlfaBankRepository();
         });
-
     }
 }
