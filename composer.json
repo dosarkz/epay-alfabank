@@ -19,5 +19,12 @@
         "psr-4": {
             "Dosarkz\\EPayAlfaBank\\": "src/"
         }
+    },
+     "extra": {
+        "laravel": {
+            "providers": [
+                "Dosarkz\\EPayAlfaBank\\AlfaBankServiceProvider"
+            ]
+        }
     }
 }
